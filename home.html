@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body onload="initial()">
+    <div class="tables">
+        <center>
+            <div class="input"> <input type="text" placeholder="Search Tables" onkeyup="searchTable(this.value)"></div>
+        </center>
+        <div class="table-1 table" ondragover="onover(event)" ondrop="drop(event,this)">
+            <div class="table-1 tablename" onclick="generatetable(this)">Table-1</div>
+            <div class="tabledetails">
+                <div class="table-1 itemname">Rs : 0</div>
+                <div class="table-1 price">| Total Items : 0</div>
+            </div>
+        </div>
+        <div class="table-2 table" ondragover="onover(event)" ondrop="drop(event,this)">
+            <div class="table-2 tablename" onclick="generatetable(this)">Table-2</div>
+            <div class="tabledetails">
+                <div class="table-2 itemname">Rs : 0</div>
+                <div class="table-2 price">| Total Items : 0</div>
+            </div>
+        </div>
+        <div class="table-3 table" ondragover="onover(event)" ondrop="drop(event,this)">
+            <div class="table-3 tablename" onclick="generatetable(this)">Table-3</div>
+            <div class="tabledetails">
+                <div class="table-3 itemname">Rs : 0</div>
+                <div class="table-3 price">| Total Items : 0</div>
+            </div>
+        </div>
+    </div>
+    <div class="receipes">
+        <center>
+            <div class="input"> <input type="text" placeholder="Search Cuisines" style="width: 100%;"
+                    onkeyup="searchCuisine(this.value)"></div>
+        </center>
+        <div id="cuisines">
+            <div class="receipecard" draggable="true" ondragstart="drag(event,this)">
+                <p id="title"><strong> Crusty Garlic Focaccia with Melted Cheese</strong></p>
+                <p id="price">Rs : 105.00</p>
+            </div>
+            <div class="receipecard" draggable="true" ondragstart="drag(event,this)">
+                <p id="title"><strong>French Fries</strong></p>
+                <p id="price">Rs : 105.00</p>
+            </div>
+            <div class="receipecard" draggable="true" ondragstart="drag(event,this)">
+                <p id="title"><strong>Home Country Fries with Herbs & Chilli Flakes</strong></p>
+                <p id="price">Rs : 105.00</p>
+            </div>
+            <div class="receipecard" draggable="true" ondragstart="drag(event,this)">
+                <p id="title"><strong>French Fries with Cheese & Jalapenos</strong></p>
+                <p id="price">Rs : 135.00</p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="popup">
+        <div class="model">
+            <table id="generate">
+                <tr>
+                    <th>S.no</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                </tr>
+            </table>
+            <div onclick="closepopup()" class="closepop">+</div>
+        </div>
+    </div>
+    <script src="scr.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+*{
+    font-family:  Helvetica, sans-serif;
+}
+
+.tables{
+    background-color:brown;
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.popup{
+    width: 100%;
+    /* box-sizing: box-box; */
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: none;
+}
+table{
+    width: 100%;
+    margin: 10px;
+    
+    border: 1px solid black;
+}
+table input{
+    text-align: center;
+}
+th{
+    border: 1px solid brown;
+}
+td{
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.model{
+    width: 80%;
+    height: 75%;
+    padding:10px;
+    padding-right: 10px;
+    background-color: white;
+    margin: auto auto;
+    
+}
+.table{
+    margin: 10px;
+    height: 100px;
+    padding: 10px;
+    background-color: blueviolet;
+    position: relative;
+    top:50px;
+}
+
+.receipes{
+    background-color: aqua;
+    width: 75%;
+    float: left;
+    height: 100%;
+    overflow: scroll;
+}
+.receipecard{
+    width:inherit;
+    border-radius: 8px;
+    margin: 10px 5px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0 5px;
+    box-shadow: 2px;
+    position: relative;
+    top: 50px;
+}
+.input{
+    width: 100%;
+}
+.input input{
+    height: 5%;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid white;
+}
+.receipes .input{
+    width: 50%;
+}
+.tablename{
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    background-color: inherit;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.tabledetails{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.itemname{
+    position: relative;
+    top: 30px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.price{
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+}
+#totalamt{
+    font-weight: bold;
+}
+.closepop{
+    transform: rotate(45deg);
+}
