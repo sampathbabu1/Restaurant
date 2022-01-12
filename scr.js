@@ -29,8 +29,6 @@ function searchCuisine(thi) {
 
 }
 
-
-
 function searchTable(thi) {
     var x = document.getElementsByClassName('table');
     for (let i in x) {
@@ -43,6 +41,8 @@ function searchTable(thi) {
     }
 
 }
+
+
 
 async function initial() {
     console.log('hi');
@@ -107,6 +107,8 @@ async function initial() {
     }
 }
 
+
+
 function generatetable(thisvalue) {
     tablename = thisvalue.innerText.toLowerCase();
     console.log(tablename);
@@ -136,7 +138,14 @@ function generatetable(thisvalue) {
             x.setAttribute('id', 'amt' + (i + 1));
             x.innerHTML = items['quantity'][i] * items['price'][i];
             cell.innerHTML = x.outerHTML;
-
+            cell = row.insertCell(4);
+            x = document.createElement('img');
+            x.setAttribute('src', 'bin.png');
+            let n = items['name'].length;
+            x.setAttribute('onclick', 'tst(' + (i + 1) + ',' + n + ')');
+            x.setAttribute('width', '25px');
+            x.setAttribute('height', '25px');
+            cell.innerHTML = x.outerHTML;
         }
         var row = doc.insertRow(i + 1);
         var cell = row.insertCell(0);
@@ -146,21 +155,48 @@ function generatetable(thisvalue) {
         cell = row.insertCell(2);
         x = document.createElement('div');
         x.setAttribute('id', 'totalamt');
-        let total = 0;
-        for (let i = 0; i < items['price'].length; i++) {
-            total += items['quantity'][i] * items['price'][i];
-        }
+        let total = totalvalue(items);
         x.innerHTML = total;
         cell.innerHTML = x.outerHTML;
         generatedTable = true;
     }
 
 }
+function totalvalue(items) {
+    let total = 0;
+    for (let i = 0; i < items['price'].length; i++) {
+        total += items['quantity'][i] * items['price'][i];
+    }
+    return total;
+}
+function tst(thisvalue, n) {
+    n = parseInt(n);
+    console.log('testing....................');
+    console.log(thisvalue);
+    x = document.getElementById('generate');
+    console.log(thisvalue, n);
+    let z = document.createElement('div');
+    z.innerText = tablename;
+    if (n == 1) {
+        console.log('in if');
+        deletetable('table', parseInt(thisvalue));
+    }
+    else {
+        x.deleteRow(thisvalue);
+        console.log('in else');
+        let items = JSON.parse(localStorage.getItem(tablename));
+        items['name'].splice(parseInt(thisvalue) - 1, 1);
+        items['price'].splice(parseInt(thisvalue) - 1, 1);
+        items['quantity'].splice(parseInt(thisvalue) - 1, 1);
+        localStorage.setItem(tablename, JSON.stringify(items));
+        document.querySelector('#totalamt').innerHTML=totalvalue(items);
+    }
+
+}
+
 
 function deletetable(tablename, n) {
     var x = document.getElementById('generate');
-    // console.log(n);
-    // console.log("table"+tablename);
     for (let i = 1; i < n; i++) {
         x.deleteRow(1);
     }
@@ -216,8 +252,8 @@ function closepopup() {
         deletetable(tablename, items['name'].length);
     }
     document.querySelector('.popup').style.display = 'none';
+    window.location.reload();
 }
-
 function drop(event, thisp) {
     var items = {}
     var tablename = thisp.className.split(' ')[0];
