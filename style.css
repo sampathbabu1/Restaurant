@@ -21,9 +21,8 @@
     display: none;
 }
 table{
-    width: 100%;
-    margin: 10px;
-    
+    width: 95%;
+    margin: 30px 10px;
     border: 1px solid black;
 }
 table input{
@@ -45,6 +44,7 @@ td{
     padding-right: 10px;
     background-color: white;
     margin: auto auto;
+    position: relative;
     
 }
 .table{
@@ -119,5 +119,11 @@ td{
     font-weight: bold;
 }
 .closepop{
+    margin: 5px;
+    position:absolute;
+    top:0;
+    right:0;
     transform: rotate(45deg);
+    font-size: 25px;
+    cursor: pointer;
 }

@@ -1,0 +1,50 @@
+{
+  "tables": 3,
+  "items": [
+    {
+      "name": "Crusty Garlic Focaccia with Melted Cheese",
+      "price": 105,
+      "type":"Starter"
+    },
+    {
+      "name": "French Fries",
+      "price": 105,
+      "type":"Starter"
+    },
+    {
+      "name": "Home Country Fries with Herbs & Chilli Flakes",
+      "price": 105,
+      "type":"Starter"
+    },
+    {
+      "name": "French Fries with Cheese & Jalapenos",
+      "price": 135,
+      "type":"Starter"
+    },
+    {
+      "name": "Chicked Schezwan Rice",
+      "price": 135,
+      "type":"Main Course"
+    },
+    {
+      "name": "Chicken Biryani",
+      "price": 200,
+      "type":"Main Course"
+    },
+    {
+      "name":"Veg Biryani",
+      "price":150,
+      "type":"Main Course"
+    },
+    {
+      "name":"Panner65 Schezwan Rice",
+      "price":250,
+      "type":"Main Course"
+    },
+    {
+      "name":"Gulab Jamun",
+      "price":80,
+      "type":"Dessert"
+    }
+  ]
+}
