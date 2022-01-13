@@ -180,6 +180,8 @@ function tst(thisvalue, n) {
     if (n == 1) {
         console.log('in if');
         deletetable('table', parseInt(thisvalue));
+        localStorage.removeItem(tablename);
+        window.location.reload();
     }
     else {
         x.deleteRow(thisvalue);

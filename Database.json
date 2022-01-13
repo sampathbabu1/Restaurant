@@ -45,6 +45,11 @@
       "name":"Gulab Jamun",
       "price":80,
       "type":"Dessert"
+    },
+    {
+      "name": "Chocolate chips Icecream",
+      "price": 105,
+      "type":"Dessert"
     }
   ]
 }

@@ -8,9 +8,9 @@
     height: 100%;
     float: left;
 }
+
 .popup{
     width: 100%;
-    /* box-sizing: box-box; */
     background-color: rgba(0, 0, 0, 0.75);
     height: 100%;
     position: absolute;
@@ -20,23 +20,27 @@
     align-items: center;
     display: none;
 }
+
 table{
     width: 95%;
     margin: 30px 10px;
     border: 1px solid black;
 }
+
 table input{
     text-align: center;
 }
 th{
     border: 1px solid brown;
 }
+
 td{
     text-align: center;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
 }
+
 .model{
     width: 80%;
     height: 75%;
@@ -61,8 +65,9 @@ td{
     width: 75%;
     float: left;
     height: 100%;
-    overflow: scroll;
+    
 }
+
 .receipecard{
     width:inherit;
     border-radius: 8px;
@@ -74,18 +79,28 @@ td{
     position: relative;
     top: 50px;
 }
+
 .input{
     width: 100%;
 }
+
 .input input{
     height: 5%;
     font-size: 15px;
     border-radius: 5px;
     margin-top: 5px;
-    border: 1px solid white;
+    border: 1px solid black;
+}
+.box{
+    /* height: 10%; */
 }
 .receipes .input{
     width: 50%;
+}
+
+#cuisines{
+    height: 95%;
+    overflow: scroll;
 }
 .tablename{
     text-align: center;
@@ -96,6 +111,7 @@ td{
     cursor: pointer;
 
 }
+
 .tabledetails{
     width: 100%;
     display: flex;
